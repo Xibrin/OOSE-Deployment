@@ -1,0 +1,16 @@
+{% extends 'scheduler/layout.html' %}
+{% load static %}
+
+{% block header %}Select Preferences{% endblock %}
+
+{% block title %}Select Preferences{% endblock %}
+
+{% block body %}
+    <form action="{% url 'preferences' %}" method="POST" id="preference-form">
+        {% csrf_token %}
+        <div id="preferences-view">
+            {{ preference_form.as_ul }}
+            <input class="btn btn-primary" type="submit" id="submit-button" value="Save Preferences">
+        </div>
+    </form>
+{% endblock %}

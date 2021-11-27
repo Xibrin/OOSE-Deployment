@@ -1,0 +1,10 @@
+{% extends 'scheduler/layout.html' %}
+{% load static %}
+
+{% block header %}EventFul{% endblock %}
+
+{% block body %}
+    <h2>Logged in as {{ user.first_name }}</h2>
+    <h3>TODO: Add User's personal event schedule</h3>
+    <a href="{% url 'search' %}">Search for Events</a>
+{% endblock %}

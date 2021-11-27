@@ -1,0 +1,12 @@
+{% extends 'scheduler/layout.html' %}
+{% load static %}
+
+{% block header %}Search{% endblock %}
+
+{% block body %}
+    <form action="{% url 'search' %}" method="POST">
+        {% csrf_token %}
+        {{ event_search_form.as_ul }}
+        <input class="btn btn-primary" type="submit" id="submit-button" value="Search">
+    </form>
+{% endblock %}
