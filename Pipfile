@@ -38,6 +38,9 @@ Django = "==3.2.9"
 Pygments = "==2.10.0"
 SQLAlchemy = "==1.4.27"
 dj-database-url = "*"
+django-heroku = "*"
+gunicorn = "*"
+psycopg2 = "*"
 
 [dev-packages]
 
